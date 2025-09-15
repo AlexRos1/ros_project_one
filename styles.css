@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #424242; /* black */
+  color: white; /* also change text color so it's visible */
+}
+
+header {
+  height: 200px; /* desktop default */
+  background: 
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.6) 40%,
+      #333 100%
+    ),
+    url("../images/lofigirl.jpg") center/cover no-repeat;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-align: center;
+  position: relative;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+  transition: background-image 2s ease-in-out; /* smooth fade */
+}
+
+nav {
+  height: 20px;               /* desktop default */
+  background-color: #333;
+  display: flex;
+  align-items: center;        /* <-- centers text vertically */
+  justify-content: space-around; /* spreads tabs evenly */
+  font-size: 0.9rem;
+}
+
+nav a {
+  flex: 1; /* evenly spaced */
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  height: 100%;              /* fill nav height */
+  display: flex;             /* make link a flex container */
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* center vertically */
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+nav a.active {
+  background-color: #4a90e2;
+  font-weight: bold;
+}
+
+/* All links */
+a:link,
+a:visited {
+  color: #87CEEB;  /* sky blue */
+  text-decoration: none; /* optional: remove underline */
+}
+
+/* Hover effect */
+a:hover {
+  color: #00BFFF; /* deeper sky blue on hover */
+  text-decoration: underline; /* optional: add underline on hover */
+}
+
+/* Active click effect */
+a:active {
+  color: #00BFFF; /* keep consistent on click */
+}
+
+.wrap-image-left {
+  float: left;           /* make text flow around the left side */
+  width: 200px;          /* adjust as needed */
+  height: auto;          /* maintain aspect ratio */
+  margin: 0 20px 20px 0; /* space around image: top right bottom left */
+  border-radius: 10px;   /* optional rounded corners */
+}
+
+.wrap-image-right {
+  float: right;        
+  width: 200px;    
+  height: auto;    
+  margin: 0 20px 20px 0;
+  border-radius: 10px;  
+}
+
+.clear-float {
+  clear: both;
+}
+
+main {
+  padding: 20px;
+}
+
+/* --- Tab content with fade-in --- */
+.tab-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.tab-content.visible {
+  display: block;
+  opacity: 1;
+}
+
+.effect {
+  margin: 15px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  color: black;
+}
+
+/* --- Mobile overrides --- */
+@media (max-width: 600px) {
+  header {
+    height: 150px;            /* mobile header */
+    font-size: 1.5rem;
+  }
+
+  nav {
+    height: 50px;             /* mobile menu */
+    font-size: 1rem;
+  }
+
+  nav a {
+    padding: 12px 0; /* bigger touch targets */
+  }
+}

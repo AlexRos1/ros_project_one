@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex's Website - Project</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    Alex's Weird Website
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="hobbies.html">Hobbies</a>
+    <a href="socials.html">Socials</a>
+    <a href="project.html" class="active">Project</a>
+  </nav>
+
+  <main>
+  <!-- Effects -->
+  <h2>JavaScript Effects</h2>
+
+  <!-- Effect 1 -->
+  <div class="effect">
+    <button onclick="changeColor()">Change Background Color</button>
+  </div>
+
+  <!-- Effect 2 -->
+  <div class="effect">
+    <p>Live Clock: <span id="clock"></span></p>
+  </div>
+
+  <!-- Effect 3 -->
+  <div class="effect">
+    <img id="swapImage" src="./images/olymoly.jpg" 
+      alt="Swap" width="150" onclick="swapImage()">
+    <p>(Click the image to swap)</p>
+  </div>
+
+  <!-- Effect 4 -->
+  <div class="effect">
+    <button onclick="toggleText()">Show/Hide Text</button>
+    <p id="togglePara" style="display:none;">Now you see me (0-0;)</p>
+  </div>
+
+  <!-- Effect 5 -->
+  <div class="effect">
+    <p>Counter: <span id="counter">0</span></p>
+  <button onclick="incrementCounter()">Click Me</button>
+  </div>
+  
+  </main>
+  <script src="js/script.js"></script>
+</body>
+</html>
